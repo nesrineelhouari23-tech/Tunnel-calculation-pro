@@ -700,29 +700,133 @@ footer {
         </div>
     </div>
 
-    <div class="note">
-        <strong>Calculation model:</strong>
-        The transverse horizontal displacement is estimated from
-        uₕ(x) = (x / z₀) Sv(x), where Sv(x) is the signed vertical settlement.
-        The vertical settlement profile is Gaussian and the trough-width parameter is i = Kz₀.
-        This relationship follows the radial displacement-vector assumption proposed by
-        O'Reilly and New (1982).
+    
+<div class="note">
 
-        <br><br>
+    <h3>1. Calculation assumptions</h3>
 
-        <strong>Sign convention:</strong>
-        The vertical settlement Sv(x) is negative downward.
-        Horizontal displacement is positive on the left side of the tunnel axis and negative
-        on the right side, so that the displacement vectors point towards the tunnel axis.
-        The maximum absolute horizontal displacement occurs at x = ±i for this Gaussian model.
+    <p>
+        The horizontal ground displacement is estimated using
+        the relationship proposed by O'Reilly and New (1982).
+        This approach links the transverse horizontal displacement
+        at the ground surface to the corresponding vertical
+        settlement through a simplified radial displacement-vector
+        assumption.
+    </p>
 
-        <br><br>
+    <p>
+        The calculation uses the vertical settlement profile
+        obtained from the Gaussian model. It assumes a homogeneous
+        ground approximation and greenfield conditions, without
+        explicitly modelling buildings, foundations or underground
+        utilities.
+    </p>
 
-        <strong>Scope:</strong>
-        This is an approximate greenfield surface-displacement model. Its applicability depends
-        on ground conditions and the assumptions of the method; it is not a substitute for
-        site-specific measurements or a calibrated numerical analysis.
-    </div>
+    <h3>2. Calculation model</h3>
+
+    <p>
+        The horizontal displacement is calculated as follows:
+    </p>
+
+    <p>
+        <strong>Horizontal displacement:</strong>
+    </p>
+
+    <p>
+        u<sub>h</sub>(x) = (x / z<sub>0</sub>) × S<sub>v</sub>(x)
+    </p>
+
+    <p>
+        The vertical settlement is described by the Gaussian
+        distribution:
+    </p>
+
+    <p>
+        S<sub>v</sub>(x) =
+        −S<sub>max</sub> × exp[−x² / (2i²)]
+    </p>
+
+    <p>
+        The trough-width parameter is:
+    </p>
+
+    <p>
+        i = K × z<sub>0</sub>
+    </p>
+
+    <p>
+        Where:
+    </p>
+
+    <ul>
+        <li>u<sub>h</sub>(x): horizontal ground displacement (m).</li>
+        <li>x: signed transverse distance from the tunnel axis (m).</li>
+        <li>z<sub>0</sub>: depth of the tunnel axis (m).</li>
+        <li>S<sub>v</sub>(x): signed vertical surface displacement (m).</li>
+        <li>S<sub>max</sub>: maximum settlement magnitude (m).</li>
+        <li>i: settlement trough-width parameter (m).</li>
+        <li>K: dimensionless trough-width coefficient.</li>
+    </ul>
+
+    <h3>3. Sign convention</h3>
+
+    <p>
+        The transverse coordinate x is defined as negative on the
+        left side of the tunnel axis and positive on the right side.
+        Downward vertical settlement is negative.
+    </p>
+
+    <p>
+        Consequently, the calculated horizontal displacement is
+        positive on the left side (x &lt; 0) and negative on the
+        right side (x &gt; 0). This sign convention indicates
+        horizontal movements directed towards the tunnel axis.
+    </p>
+
+    <p>
+        At the tunnel axis (x = 0), the horizontal displacement
+        is zero. For the Gaussian settlement profile, the maximum
+        absolute horizontal displacement occurs at x = −i and
+        x = +i, with opposite signs.
+    </p>
+
+    <h3>4. Interpretation of results</h3>
+
+    <p>
+        The horizontal displacement varies with the transverse
+        position relative to the tunnel axis. Its magnitude
+        increases from zero at the axis, reaches a maximum on
+        either side, and then decreases with increasing distance.
+    </p>
+
+    <p>
+        The displacement profile is antisymmetric: the magnitudes
+        on both sides are equal under the assumed symmetric
+        Gaussian settlement profile, but their signs are opposite.
+    </p>
+
+    <h3>5. Scope and limitations</h3>
+
+    <p>
+        This relationship provides an approximate estimate of
+        transverse horizontal surface displacement under
+        greenfield conditions. It is useful for preliminary
+        assessments and for studying the relationship between
+        vertical and horizontal ground movements.
+    </p>
+
+    <p>
+        The simplified approach does not explicitly account for
+        soil heterogeneity, groundwater conditions, construction
+        sequence, three-dimensional effects or soil–structure
+        interaction. Results should therefore be interpreted
+        with regard to the assumptions of the model and compared,
+        where possible, with field measurements or calibrated
+        numerical analyses.
+    </p>
+
+</div>
+
 
 </div>
 
