@@ -459,20 +459,113 @@ footer {
 
     </div>
 
-    <div class="note">
-        <strong>Calculation assumptions:</strong>
-        The method assumes a symmetric Gaussian settlement trough,
-        a homogeneous ground approximation and a greenfield condition.
-        The settlement volume per unit tunnel length is assumed equal
-        to the volume loss multiplied by the excavated tunnel area.
-        The coefficient K is entered manually.
+   
+<div class="note">
 
-        <br><br>
+    <h3>1. Calculation assumptions</h3>
 
-        <strong>Sign convention:</strong>
-        Downward vertical displacement is negative.
-        The calculated settlement volume remains positive.
-    </div>
+    <p>
+        The Peck (1969) method describes the transverse surface
+        settlement profile induced by tunnel excavation using
+        a symmetric Gaussian distribution centred on the tunnel axis.
+    </p>
+
+    <p>
+        The calculation is based on a homogeneous ground approximation
+        and a greenfield condition, meaning that the influence of
+        buildings, foundations and underground utilities is not
+        explicitly considered.
+    </p>
+
+    <p>
+        The settlement volume per unit tunnel length is assumed to
+        correspond to the product of the volume loss ratio and the
+        excavated tunnel cross-sectional area. The trough-width
+        parameter is defined by i = K × z₀, where K is entered
+        manually according to the considered ground conditions.
+    </p>
+
+    <h3>2. Calculation model</h3>
+
+    <p>
+        The calculation follows the successive relationships below:
+    </p>
+
+    <p><strong>Excavated tunnel area:</strong></p>
+    <p>A = πD² / 4</p>
+
+    <p><strong>Settlement volume per unit tunnel length:</strong></p>
+    <p>V<sub>s</sub> = (V<sub>L</sub> / 100) × A</p>
+
+    <p>
+        Since the calculation is performed per unit tunnel length,
+        V<sub>s</sub> is expressed in m².
+    </p>
+
+    <p><strong>Settlement trough-width parameter:</strong></p>
+    <p>i = K × z₀</p>
+
+    <p><strong>Maximum settlement magnitude:</strong></p>
+    <p>S<sub>max</sub> = V<sub>s</sub> / (√(2π) × i)</p>
+
+    <p><strong>Vertical settlement at a transverse distance x:</strong></p>
+    <p>
+        S<sub>v</sub>(x) =
+        −S<sub>max</sub> × exp[−x² / (2i²)]
+    </p>
+
+    <h3>3. Sign convention</h3>
+
+    <p>
+        Downward vertical displacement is considered negative,
+        whereas upward displacement is positive. Consequently,
+        the calculated vertical settlement S<sub>v</sub>(x)
+        is negative. In contrast, S<sub>max</sub> and
+        V<sub>s</sub> represent positive magnitudes.
+    </p>
+
+    <p>
+        The maximum settlement magnitude occurs directly above
+        the tunnel axis (x = 0). It progressively decreases
+        with increasing transverse distance from the axis.
+    </p>
+
+    <h3>4. Interpretation of results</h3>
+
+    <p>
+        The parameter i characterises the width of the settlement
+        trough. A larger value of i produces a wider and, for a
+        fixed settlement volume, generally shallower trough.
+    </p>
+
+    <p>
+        S<sub>max</sub> represents the maximum settlement magnitude,
+        while S<sub>v</sub>(x) gives the signed vertical displacement
+        at the selected transverse position. The graph and results
+        table illustrate the spatial distribution of settlement
+        above the tunnel.
+    </p>
+
+    <h3>5. Scope and limitations</h3>
+
+    <p>
+        This analytical approach provides an approximate estimate
+        of the transverse ground settlement profile under
+        greenfield conditions. It is particularly useful for
+        preliminary assessments and parametric studies.
+    </p>
+
+    <p>
+        The simplified model does not explicitly account for
+        complex soil layering, groundwater effects, construction
+        sequence, three-dimensional effects or soil–structure
+        interaction. The results should therefore be interpreted
+        as estimates and, where possible, compared with
+        site-specific measurements or calibrated numerical analyses.
+    </p>
+
+</div>
+
 
 </div>
 
